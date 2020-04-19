@@ -1,8 +1,6 @@
 <?php
 
-require_once _ROOT_PATH."/app/CalcForm.class.php";
-require_once _ROOT_PATH."/app/CalcResult.class.php";
-require_once _ROOT_PATH."/app/CalcMessages.class.php";
+
 
 
 class CalcCtrl{
@@ -70,7 +68,6 @@ $this->result->result = $this->form->x;
 //echo "<br>";
 //echo 'OK - obliczono wynik: ' .$result; 
 $this->wyswietl();
-//include _ROOT_PATH.'/index.php';
 }
 
 
@@ -100,7 +97,7 @@ function wyswietl(){
 	<label for="id_y">Oprocentowanie roczne: </label>
 	<input id="id_y" type="text" name="y" /><br />
 
-	<label for="id_z">Ilośc miesięcy: </label>
+	<label for="id_z">Ilość miesięcy: </label>
 	<input id="id_z" type="text" name="z" /><br />
 
 
@@ -146,7 +143,6 @@ if ($this->waliduj()){
 <embed src="http://localhost:80/progressus/assets/nice.mp3" loop="false" autostart="true" width="0" height="0">
 <?php
 $this->wykonaj();
-//include _ROOT_PATH."/index.php";
 }
 else{
 ?>
@@ -154,8 +150,6 @@ else{
 <embed src="http://localhost:80/progressus/assets/onie.mp3" loop="false" autostart="true" width="0" height="0">
 <?php
 $this->wyswietl();
-
-//include _ROOT_PATH."/index.php";
 }   
 }
 }

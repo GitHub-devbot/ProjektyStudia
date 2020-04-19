@@ -1,7 +1,5 @@
 <?php
-require_once dirname(__FILE__) . '/../config.php';
-//require_once _ROOT_PATH.'lib/smarty/Smarty.class.php';
-require_once _ROOT_PATH . '/app/CalcCtrl.class.php';
+
 $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 
 switch ($action) {
