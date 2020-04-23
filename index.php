@@ -2,8 +2,8 @@
 
 <?php
 require_once 'config.php';
-require_once _ROOT_PATH.'/init.php';
-include _ROOT_PATH.'/app/security/check.php';		
+require_once $conf->ROOT_PATH.'/init.php';
+include $conf->ROOT_PATH.'/app/security/check.php';		
 $action;
-include _ROOT_PATH.'/ctrl.php';
+include $conf->ROOT_PATH.'/ctrl.php';
 ?>	

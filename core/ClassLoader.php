@@ -8,7 +8,7 @@ class ClassLoader {
     public function __construct() {
         spl_autoload_register(function($class) {
             $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
-            $fileName = _ROOT_PATH . DIRECTORY_SEPARATOR . $class . '.class.php';
+            $fileName = $conf->ROOT_PATH . DIRECTORY_SEPARATOR . $class . '.class.php';
             if (is_readable($fileName)) {
                 require_once $fileName;
             }

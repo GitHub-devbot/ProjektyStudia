@@ -1,9 +1,9 @@
 <?php
 
-require_once _ROOT_PATH.'/core/CalcCtrl.class.php';
-require_once _ROOT_PATH."/core/CalcForm.class.php";
-require_once _ROOT_PATH."/core/CalcResult.class.php";
-require_once _ROOT_PATH."/core/CalcMessages.class.php";
+require_once $conf->ROOT_PATH.'/core/CalcCtrl.class.php';
+require_once $conf->ROOT_PATH."/core/CalcForm.class.php";
+require_once $conf->ROOT_PATH."/core/CalcResult.class.php";
+require_once $conf->ROOT_PATH."/core/CalcMessages.class.php";
 
 // Obecnie to co poniżej nieużywane (może zawierać błędy), byćmoże przyda się w następnych lekcjach
 

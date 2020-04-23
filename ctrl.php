@@ -4,33 +4,33 @@ $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 
 switch ($action) {
     default: {
-        include _ROOT_PATH.'/parts/top.php';
-        include _ROOT_PATH.'/parts/main.php';
+        include $conf->ROOT_PATH.'/parts/top.php';
+        include $conf->ROOT_PATH.'/parts/main.php';
             $ctrl = new CalcCtrl();
             $ctrl->construct();
             $ctrl->wyswietl();
-        include _ROOT_PATH.'/parts/bottom.php';    
+        include $conf->ROOT_PATH.'/parts/bottom.php';    
             
             break;
         }
     case 'Oblicz': {
-        include _ROOT_PATH.'/parts/top.php';
-        include _ROOT_PATH.'/parts/main.php';
+        include $conf->ROOT_PATH.'/parts/top.php';
+        include $conf->ROOT_PATH.'/parts/main.php';
             $ctrl = new CalcCtrl();
             $ctrl->kontroler();
-        include _ROOT_PATH.'/parts/bottom.php'; 
+        include $conf->ROOT_PATH.'/parts/bottom.php'; 
             break;
         }
     case 'left': {
-  include _ROOT_PATH.'/parts/top.php';    
-  include _ROOT_PATH.'/parts/sidebar-left.php';
-  include _ROOT_PATH.'/parts/bottom.php'; 
+  include $conf->ROOT_PATH.'/parts/top.php';    
+  include $conf->ROOT_PATH.'/parts/sidebar-left.php';
+  include $conf->ROOT_PATH.'/parts/bottom.php'; 
             break;
         }
     case 'right': {
-    include _ROOT_PATH.'/parts/top.php';       
-  include _ROOT_PATH.'/parts/sidebar-right.php';
-  include _ROOT_PATH.'/parts/bottom.php';
+    include $conf->ROOT_PATH.'/parts/top.php';       
+  include $conf->ROOT_PATH.'/parts/sidebar-right.php';
+  include $conf->ROOT_PATH.'/parts/bottom.php';
             break;
         }
 }

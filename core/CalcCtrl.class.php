@@ -1,8 +1,5 @@
 <?php
 
-
-
-
 class CalcCtrl{
     
     public $messages;

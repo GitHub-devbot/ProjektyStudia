@@ -1,9 +1,15 @@
 
 <?php
-define('_SERVER_NAME', 'localhost:80');
-define('_SERVER_URL', 'http://'._SERVER_NAME);
-define('_APP_ROOT', '/progressus');
-define('_APP_URL', _SERVER_URL._APP_ROOT);
+
+require_once 'config.class.php';
+
+$conf = new config();
+
+$conf->SERVER_NAME =  'localhost:80';
+$conf->SERVER_URL = 'http://'.$conf->SERVER_NAME;
+$conf->APP_ROOT = '/progressus';
+$conf->APP_URL = $conf->SERVER_URL.$conf->APP_ROOT;
 //define('_APP_URL', 'http://localhost:80/kontrolerphp');
-define("_ROOT_PATH", dirname(__FILE__));
+$conf->ROOT_PATH = dirname(__FILE__);
+define('_APP_ROOT', '/progressus');
 ?>
