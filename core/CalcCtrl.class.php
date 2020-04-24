@@ -1,5 +1,7 @@
 <?php
 
+
+
 class CalcCtrl{
     
     public $messages;
@@ -11,8 +13,7 @@ class CalcCtrl{
         $this->result = new CalcResult(); 
     }
     
-    
-    
+        
     
     
 function pobierz(){
@@ -70,6 +71,8 @@ $this->wyswietl();
 
 
 function wyswietl(){
+        include _ROOT_PATH.'/parts/top.php';
+        include _ROOT_PATH.'/parts/main.php';          
 ?>    
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
@@ -124,30 +127,34 @@ echo "Kapitał po " .$this->form->z;
 echo " miesiącach: " . $this->result->result; 
 echo " zł"; ?>
 </div>
-<?php 
-
+<?php  
+}     
 }
 
-    
+function akcjaA(){
+            $this->construct();
+            $this->wyswietl();           
 }
 
-function kontroler(){
+function akcjaB(){
     $this->construct();
     $this->pobierz();
-if ($this->waliduj()){          
-?>
-<html lang="en">
-<embed src="http://localhost:80/progressus/assets/nice.mp3" loop="false" autostart="true" width="0" height="0">
-<?php
+if ($this->waliduj()){  
+
 $this->wykonaj();
+    ?>
+<html lang="en">
+<embed src="http://localhost:80/progressus/assets/nice.mp3" loop="false" autostart="true" width="0" height="0" >
+<?php  
 }
 else{
-?>
+
+$this->wyswietl();
+  ?>
 <html lang="en">
 <embed src="http://localhost:80/progressus/assets/onie.mp3" loop="false" autostart="true" width="0" height="0">
-<?php
-$this->wyswietl();
-}   
+<?php 
+}
 }
 }
 

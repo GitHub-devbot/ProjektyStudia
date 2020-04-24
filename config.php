@@ -11,5 +11,6 @@ $conf->APP_ROOT = '/progressus';
 $conf->APP_URL = $conf->SERVER_URL.$conf->APP_ROOT;
 //define('_APP_URL', 'http://localhost:80/kontrolerphp');
 $conf->ROOT_PATH = dirname(__FILE__);
-define('_APP_ROOT', '/progressus');
+define('_APP_ROOT', $conf->APP_ROOT);
+define('_ROOT_PATH', $conf->ROOT_PATH);
 ?>

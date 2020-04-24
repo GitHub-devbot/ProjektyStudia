@@ -4,21 +4,16 @@ $action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 
 switch ($action) {
     default: {
-        include $conf->ROOT_PATH.'/parts/top.php';
-        include $conf->ROOT_PATH.'/parts/main.php';
+        
             $ctrl = new CalcCtrl();
-            $ctrl->construct();
-            $ctrl->wyswietl();
-        include $conf->ROOT_PATH.'/parts/bottom.php';    
-            
+            $ctrl->akcjaA(); 
+            include $conf->ROOT_PATH.'/parts/bottom.php'; 
             break;
         }
     case 'Oblicz': {
-        include $conf->ROOT_PATH.'/parts/top.php';
-        include $conf->ROOT_PATH.'/parts/main.php';
-            $ctrl = new CalcCtrl();
-            $ctrl->kontroler();
-        include $conf->ROOT_PATH.'/parts/bottom.php'; 
+            $ctrl = new CalcCtrl();        
+            $ctrl->akcjaB();
+            include $conf->ROOT_PATH.'/parts/bottom.php'; 
             break;
         }
     case 'left': {
@@ -28,7 +23,7 @@ switch ($action) {
             break;
         }
     case 'right': {
-    include $conf->ROOT_PATH.'/parts/top.php';       
+  include $conf->ROOT_PATH.'/parts/top.php';       
   include $conf->ROOT_PATH.'/parts/sidebar-right.php';
   include $conf->ROOT_PATH.'/parts/bottom.php';
             break;
