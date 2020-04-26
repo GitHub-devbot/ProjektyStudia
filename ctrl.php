@@ -1,34 +1,3 @@
-<?php
-
-$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
-
-switch ($action) {
-    default: {
-        
-            $ctrl = new CalcCtrl();
-            $ctrl->akcjaA(); 
-            include $conf->ROOT_PATH.'/parts/bottom.php'; 
-            break;
-        }
-    case 'Oblicz': {
-            $ctrl = new CalcCtrl();        
-            $ctrl->akcjaB();
-            include $conf->ROOT_PATH.'/parts/bottom.php'; 
-            break;
-        }
-    case 'left': {
-  include $conf->ROOT_PATH.'/parts/top.php';    
-  include $conf->ROOT_PATH.'/parts/sidebar-left.php';
-  include $conf->ROOT_PATH.'/parts/bottom.php'; 
-            break;
-        }
-    case 'right': {
-  include $conf->ROOT_PATH.'/parts/top.php';       
-  include $conf->ROOT_PATH.'/parts/sidebar-right.php';
-  include $conf->ROOT_PATH.'/parts/bottom.php';
-            break;
-        }
-}
 
 
 

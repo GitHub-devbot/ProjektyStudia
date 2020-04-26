@@ -1,9 +1,32 @@
-<!DOCTYPE html>
-
 <?php
-require_once 'config.php';
-require_once $conf->ROOT_PATH.'/init.php';
-include $conf->ROOT_PATH.'/app/security/check.php';		
-$action;
-include $conf->ROOT_PATH.'/ctrl.php';
-?>	
+
+require_once 'init.php';
+// include $conf->ROOT_PATH . '/app/security/check.php';
+
+switch ($action) {
+    default: {
+            require $conf->ROOT_PATH . '/app/CalcCtrl.class.php';
+            $ctrl = new CalcCtrl();
+            $ctrl->akcjaA();
+            break;
+        }
+    case 'Oblicz': {
+            require $conf->ROOT_PATH . '/app/CalcCtrl.class.php';
+            $ctrl = new CalcCtrl();
+            $ctrl->akcjaB();
+            break;
+        }
+    case 'left': {
+            include $conf->ROOT_PATH.'/app/PagesCtrl.class.php';
+            $ctrl = new PagesCtrl();
+            $ctrl->showleft();
+            break;
+        }
+    case 'right': {
+            include $conf->ROOT_PATH.'/app/PagesCtrl.class.php';
+            $ctrl = new PagesCtrl();
+            $ctrl->showright();
+            break;
+        }
+}
+	

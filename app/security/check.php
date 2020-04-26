@@ -1,5 +1,4 @@
 <?php
-require_once dirname(__FILE__).'/../../config.php';
 //inicjacja mechanizmu sesji
 session_start();
 

@@ -1,11 +1,10 @@
 <?php
 
-require_once $conf->ROOT_PATH.'/core/CalcCtrl.class.php';
-require_once $conf->ROOT_PATH."/core/CalcForm.class.php";
-require_once $conf->ROOT_PATH."/core/CalcResult.class.php";
-require_once $conf->ROOT_PATH."/core/CalcMessages.class.php";
+require_once 'config.php';
+$action = isset($_REQUEST['action']) ? $_REQUEST['action'] : '';
 
-// Obecnie to co poniżej nieużywane (może zawierać błędy), byćmoże przyda się w następnych lekcjach
+
+// Obecnie to co poniżej nieużywane (może zawierać błędy), być może przyda się w następnych lekcjach
 
 /*
 function &getConf() {

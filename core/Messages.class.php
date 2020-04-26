@@ -1,6 +1,6 @@
 <?php
 
-class CalcMessages {
+class Messages {
 
     private $errors = array();
     private $info = array();
