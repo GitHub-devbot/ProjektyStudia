@@ -12,4 +12,5 @@ $conf->APP_URL = $conf->SERVER_URL.$conf->APP_ROOT;
 //define('_APP_URL', 'http://localhost:80/kontrolerphp');
 $conf->ROOT_PATH = dirname(__FILE__);
 define('_ROOT_PATH', $conf->ROOT_PATH);
+define('_APP_URL', $conf->APP_URL);
 ?>

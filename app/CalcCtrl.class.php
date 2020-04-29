@@ -3,6 +3,7 @@
 require_once $conf->ROOT_PATH . "/app/CalcResult.class.php";
 require_once $conf->ROOT_PATH . "/core/Messages.class.php";
 require_once $conf->ROOT_PATH . "/app/CalcForm.class.php";
+require_once $conf->ROOT_PATH . "/lib/smarty/Smarty.class.php";
 
 class CalcCtrl {
 
@@ -65,11 +66,11 @@ class CalcCtrl {
     }
 
     function wyswietl() {
-        include 'calcview.php';
+        include 'calcview.tpl';
     }
 
     function akcjaA() {
-        $this->wyswietl();
+        $this->smarty();
     }
 
     function akcjaB() {
@@ -77,7 +78,28 @@ class CalcCtrl {
         if ($this->waliduj()) {
             $this->wykonaj();
         }
-        $this->wyswietl();
+        $this->smarty();
     }
 
+    function smarty(){
+        
+    $smarty = new Smarty();
+
+$smarty->assign('app_url',_APP_URL);
+$smarty->assign('root_path',_ROOT_PATH);
+$smarty->assign('page_title','Progressus');
+$smarty->assign('page_description','Kalkulator Kredytowy');
+$smarty->assign('page_header','Progressus');
+
+//pozostałe zmienne niekoniecznie muszą istnieć, dlatego sprawdzamy aby nie otrzymać ostrzeżenia
+$smarty->assign('form',$this->form);
+$smarty->assign('result',$this->result);
+$smarty->assign('messages',$this->messages);   
+        
+$smarty->display( _ROOT_PATH . '/app/calcview.tpl');
+        
+    }
+    
+    
+    
 }
