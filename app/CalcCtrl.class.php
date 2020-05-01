@@ -66,7 +66,7 @@ class CalcCtrl {
     }
 
     function wyswietl() {
-        include 'calcview.tpl';
+        include 'calcview.php';
     }
 
     function akcjaA() {
@@ -96,7 +96,7 @@ $smarty->assign('form',$this->form);
 $smarty->assign('result',$this->result);
 $smarty->assign('messages',$this->messages);   
         
-$smarty->display( _ROOT_PATH . '/app/calcview.tpl');
+$smarty->display( _ROOT_PATH . '/app/calcview.php');
         
     }
     

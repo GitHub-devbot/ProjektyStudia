@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-04-29 23:43:49
+/* Smarty version 3.1.34-dev-7, created on 2020-05-01 20:55:57
   from 'D:\Prg\xampp\htdocs\Progressus\app\calcview.php' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5ea9f515360876_60633634',
+  'unifunc' => 'content_5eac70bd74e407_57138665',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ad45840e4cee43af34ef2f1cd7ba0e5d0ac32336' => 
     array (
       0 => 'D:\\Prg\\xampp\\htdocs\\Progressus\\app\\calcview.php',
-      1 => 1587897113,
+      1 => 1588359320,
       2 => 'file',
     ),
   ),
@@ -20,13 +20,15 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5ea9f515360876_60633634 (Smarty_Internal_Template $_smarty_tpl) {
-echo '<?php
+function content_5eac70bd74e407_57138665 (Smarty_Internal_Template $_smarty_tpl) {
+?><a href="http://localhost:80/progressus/parts/top.php"></a>
+<?php echo '<?php
 ';?>
-include _ROOT_PATH . '/parts/top.php';
-include _ROOT_PATH . '/parts/main.php';
+global $conf;
+include $conf->ROOT_PATH . '/parts/top.php';
+include $conf->ROOT_PATH . '/parts/main.php';
 <?php echo '?>';?>
-    
+  
 <div style="width:90%; margin: 2em auto;">
     <form action="<?php echo '<?php ';?>
 print($conf->APP_URL); <?php echo '?>';?>
@@ -66,30 +68,27 @@ if ($this->messages->isError()) {
     echo '<embed src="http://localhost:80/progressus/assets/onie.mp3" loop="false" autostart="true" width="0" height="0" >';
     
 }
-<?php echo '?>';?>
 
 
-<?php echo '<?php
-';?>
+
 if (isset($this->result->result)) {
 //echo "<br>";  
 //echo "OK - calc_view otrzymał dane"
     <?php echo '?>';?>
 
     <div style="margin: 60px; padding: 10px; border-radius: 5px; background-color: #1f1; width:300px;">
-        <?php echo '<?php
+     <?php echo '<?php   
         ';?>
 echo "Kapitał po " . $this->form->z;
         echo " miesiącach: " . $this->result->result;
         echo " zł";
-        <?php echo '?>';?>
-
+    <?php echo '?>';?>
+   
     </div>
     <embed src="http://localhost:80/progressus/assets/nice.mp3" loop="false" autostart="true" width="0" height="0" >
-    <?php echo '<?php
+<?php echo '<?php   
 ';?>
 }
-<?php echo '?>';?>
 
 
 
@@ -97,8 +96,7 @@ echo "Kapitał po " . $this->form->z;
 
 
 
-<?php echo '<?php
-';?>
+
 include $conf->ROOT_PATH . '/parts/bottom.php';
 <?php echo '?>';?>
 

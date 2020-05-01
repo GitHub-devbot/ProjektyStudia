@@ -1,7 +1,7 @@
 <?php
 
 require_once 'init.php';
-// include $conf->ROOT_PATH . '/app/security/check.php';
+include $conf->ROOT_PATH . '/app/security/check.php';
 
 switch ($action) {
     default: {

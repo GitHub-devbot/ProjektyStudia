@@ -1,7 +1,6 @@
 <?php
 global $conf;
 ?>
-
 <!DOCTYPE html>
 
 <html lang="en">

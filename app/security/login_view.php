@@ -4,12 +4,13 @@
 	<meta charset="utf-8" />
 	<title>Logowanie</title>
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+        </link>
 </head>
 <body>
 
 <div style="width:90%; margin: 2em auto;">
 
-<form action="<?php print(_APP_ROOT); ?>/app/security/login.php" method="post" class="pure-form pure-form-stacked">
+<form action="<?php print($conf->APP_ROOT); ?>/app/security/login.php" method="post" class="pure-form pure-form-stacked">
 	<legend>Logowanie</legend>
 	<fieldset>
 		<label for="id_login">login: </label>

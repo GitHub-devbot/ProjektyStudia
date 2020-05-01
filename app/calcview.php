@@ -1,7 +1,8 @@
 <?php
-include _ROOT_PATH . '/parts/top.php';
-include _ROOT_PATH . '/parts/main.php';
-?>    
+global $conf;
+include $conf->ROOT_PATH . '/parts/top.php';
+include $conf->ROOT_PATH . '/parts/main.php';
+?>  
 <div style="width:90%; margin: 2em auto;">
     <form action="<?php print($conf->APP_URL); ?>/index.php?action=Oblicz" method="post" class="pure-form pure-form-stacked">
         <fieldset>
@@ -20,7 +21,7 @@ include _ROOT_PATH . '/parts/main.php';
             <input id="id_z" type="text" name="z" /><br />
 
 
-            <input type="submit" class="pure-button pure-button-active"value="Oblicz" />
+            <input type="submit" class="pure-button pure-button-active" value="Oblicz" />
 
         </fieldset>
 
@@ -38,30 +39,30 @@ if ($this->messages->isError()) {
     echo '<embed src="http://localhost:80/progressus/assets/onie.mp3" loop="false" autostart="true" width="0" height="0" >';
     
 }
-?>
 
-<?php
+
+
 if (isset($this->result->result)) {
 //echo "<br>";  
 //echo "OK - calc_view otrzymał dane"
     ?>
     <div style="margin: 60px; padding: 10px; border-radius: 5px; background-color: #1f1; width:300px;">
-        <?php
+     <?php   
         echo "Kapitał po " . $this->form->z;
         echo " miesiącach: " . $this->result->result;
         echo " zł";
-        ?>
+    ?>   
     </div>
     <embed src="http://localhost:80/progressus/assets/nice.mp3" loop="false" autostart="true" width="0" height="0" >
-    <?php
+<?php   
 }
-?>
 
 
 
 
 
 
-<?php
+
+
 include $conf->ROOT_PATH . '/parts/bottom.php';
 ?>
