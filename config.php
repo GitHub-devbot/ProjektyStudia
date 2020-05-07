@@ -1,9 +1,8 @@
-
 <?php
 
-require_once 'config.class.php';
+//require_once 'config.class.php';
 
-$conf = new config();
+//$conf = new config();
 
 $conf->SERVER_NAME =  'localhost:80';
 $conf->SERVER_URL = 'http://'.$conf->SERVER_NAME;

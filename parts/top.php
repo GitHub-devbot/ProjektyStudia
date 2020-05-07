@@ -32,7 +32,7 @@ global $conf;
 			<div class="navbar-header">
 				<!-- Button for smallest screens -->
 				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-				<a class="navbar-brand" href= "http://localhost:80/progressus/index.php"><img src="http://localhost:80/progressus/assets/images/logo.png" alt="Progressus HTML5 template"></a>
+				<a class="navbar-brand" href= " http://localhost:80/progressus/index.php"><img src="http://localhost:80/progressus/assets/images/logo.png" alt="Progressus HTML5 template"></a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
@@ -44,7 +44,7 @@ global $conf;
 							<li><a href="http://localhost:80/progressus/index.php?action=right">Memy z Januszem 2</a></li>
 						</ul>
 					</li>
-                                        <li><a class="btn" href="http://localhost:80/progressus/app/security/logout.php"> Wyloguj</a></li>
+                                        <li><a class="btn" href="<?php print($conf->APP_URL . '/app/security/LoginCtrl.class.php->doLogout'); ?>"> Wyloguj</a></li>
 				</ul>
 			</div><!--/.nav-collapse -->
 		</div>

@@ -1,6 +1,8 @@
 <?php
 //inicjacja mechanizmu sesji
+if (session_status() == PHP_SESSION_NONE){
 session_start();
+}
 
 //pobranie roli
 $role = isset($_SESSION['role']) ? $_SESSION['role'] : '';

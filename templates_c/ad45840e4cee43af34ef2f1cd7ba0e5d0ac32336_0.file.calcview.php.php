@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-05-01 20:55:57
+/* Smarty version 3.1.34-dev-7, created on 2020-05-01 20:57:22
   from 'D:\Prg\xampp\htdocs\Progressus\app\calcview.php' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5eac70bd74e407_57138665',
+  'unifunc' => 'content_5eac71120b61d2_91404525',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ad45840e4cee43af34ef2f1cd7ba0e5d0ac32336' => 
     array (
       0 => 'D:\\Prg\\xampp\\htdocs\\Progressus\\app\\calcview.php',
-      1 => 1588359320,
+      1 => 1588359384,
       2 => 'file',
     ),
   ),
@@ -20,9 +20,8 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5eac70bd74e407_57138665 (Smarty_Internal_Template $_smarty_tpl) {
-?><a href="http://localhost:80/progressus/parts/top.php"></a>
-<?php echo '<?php
+function content_5eac71120b61d2_91404525 (Smarty_Internal_Template $_smarty_tpl) {
+echo '<?php
 ';?>
 global $conf;
 include $conf->ROOT_PATH . '/parts/top.php';
@@ -49,7 +48,7 @@ print($conf->APP_URL); <?php echo '?>';?>
             <input id="id_z" type="text" name="z" /><br />
 
 
-            <input type="submit" class="pure-button pure-button-active"value="Oblicz" />
+            <input type="submit" class="pure-button pure-button-active" value="Oblicz" />
 
         </fieldset>
 

@@ -1,10 +1,10 @@
-<?php
+{
 global $conf;
 include $conf->ROOT_PATH . '/parts/top.php';
 include $conf->ROOT_PATH . '/parts/main.php';
-?>
+}
 <div style="width:90%; margin: 2em auto;">
-    <form action=" <?php print($conf->APP_URL); ?> /index.php?action=Oblicz" method="post" class="pure-form pure-form-stacked">
+    <form action=" { print($conf->APP_URL); } /index.php?action=Oblicz" method="post" class="pure-form pure-form-stacked">
         <fieldset>
             <font size = 5> 
             <label for="id_x">Kalkulator lokat bankowych </label> 	
@@ -27,7 +27,7 @@ include $conf->ROOT_PATH . '/parts/main.php';
 
     </form>
 </div>	
-<?php
+{
 //wyświeltenie listy błędów, jeśli istnieją
 if ($this->messages->isError()) {
 
@@ -45,17 +45,24 @@ if ($this->messages->isError()) {
 if (isset($this->result->result)) {
 //echo "<br>";  
 //echo "OK - calc_view otrzymał dane"
-    ?>
+    }
     <div style="margin: 60px; padding: 10px; border-radius: 5px; background-color: #1f1; width:300px;">
-     <?php   
+     {   
         echo "Kapitał po " . $this->form->z;
         echo " miesiącach: " . $this->result->result;
         echo " zł";
-    ?>  
+    }  
     </div>
     <embed src="http://localhost:80/progressus/assets/nice.mp3" loop="false" autostart="true" width="0" height="0" >
-<?php   
+{   
 }
+}
+
+
+
+
+
+
 
 include $conf->ROOT_PATH . '/parts/bottom.php';
 ?>

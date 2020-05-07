@@ -1,5 +1,4 @@
-<?php
-
+<?php 
 class Messages {
 
     private $errors = array();
@@ -41,5 +40,4 @@ class Messages {
         $this->info = array();
         $this->nr = 0;
     }
-
 }

@@ -70,7 +70,7 @@ class CalcCtrl {
     }
 
     function akcjaA() {
-        $this->smarty();
+        $this->wyswietl();
     }
 
     function akcjaB() {
@@ -78,7 +78,7 @@ class CalcCtrl {
         if ($this->waliduj()) {
             $this->wykonaj();
         }
-        $this->smarty();
+        $this->wyswietl();
     }
 
     function smarty(){
@@ -96,7 +96,7 @@ $smarty->assign('form',$this->form);
 $smarty->assign('result',$this->result);
 $smarty->assign('messages',$this->messages);   
         
-$smarty->display( _ROOT_PATH . '/app/calcview.php');
+$smarty->display( _ROOT_PATH . '/app/calcview.tpl');
         
     }
     
