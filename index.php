@@ -1,7 +1,7 @@
 <?php
 
 require_once 'init.php';
-
+include $conf->ROOT_PATH . '/check.php';
 
 switch ($action) {
     default: { // publiczne
@@ -11,7 +11,7 @@ switch ($action) {
             break;
         }
     case 'Oblicz': { // niepubliczne
-            include $conf->ROOT_PATH . '/check.php';
+
             require $conf->ROOT_PATH . '/app/CalcCtrl.class.php';
             $ctrl = new CalcCtrl();
             $ctrl->akcjaB();

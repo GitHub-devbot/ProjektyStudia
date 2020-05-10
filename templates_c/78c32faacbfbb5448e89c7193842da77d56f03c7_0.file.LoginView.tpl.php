@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.34-dev-7, created on 2020-05-07 22:32:38
+/* Smarty version 3.1.34-dev-7, created on 2020-05-10 23:28:55
   from 'D:\Prg\xampp\htdocs\Progressus\app\security\LoginView.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.34-dev-7',
-  'unifunc' => 'content_5eb4706650e5b6_78949197',
+  'unifunc' => 'content_5eb87217235918_67411671',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '78c32faacbfbb5448e89c7193842da77d56f03c7' => 
     array (
       0 => 'D:\\Prg\\xampp\\htdocs\\Progressus\\app\\security\\LoginView.tpl',
-      1 => 1588883526,
+      1 => 1589146133,
       2 => 'file',
     ),
   ),
@@ -21,32 +21,31 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:messages.tpl' => 1,
   ),
 ),false)) {
-function content_5eb4706650e5b6_78949197 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5eb87217235918_67411671 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
-
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_7743758685eb470665068b7_19802995', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_372547925eb8721722dc19_77347255', 'content');
 ?>
 
 <?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.tpl");
 }
 /* {block 'content'} */
-class Block_7743758685eb470665068b7_19802995 extends Smarty_Internal_Block
+class Block_372547925eb8721722dc19_77347255 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_7743758685eb470665068b7_19802995',
+    0 => 'Block_372547925eb8721722dc19_77347255',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 ?>
 
-<form action="<?php echo $_smarty_tpl->tpl_vars['ctrl']->value->doLogin;?>
- " method="post"  class="pure-form pure-form-aligned bottom-margin">
+<form action="<?php echo $_smarty_tpl->tpl_vars['ctrl2']->value->doLogin();?>
+" method="post"  class="pure-form pure-form-aligned bottom-margin">
 	<legend>Logowanie do systemu</legend>
 	<fieldset>
         <div class="pure-control-group">

@@ -1,7 +1,6 @@
 {extends file="main.tpl"}
-
 {block name=content}
-<form action="{$ctrl->doLogin} " method="post"  class="pure-form pure-form-aligned bottom-margin">
+<form action="{$ctrl2->doLogin()}" method="post"  class="pure-form pure-form-aligned bottom-margin">
 	<legend>Logowanie do systemu</legend>
 	<fieldset>
         <div class="pure-control-group">

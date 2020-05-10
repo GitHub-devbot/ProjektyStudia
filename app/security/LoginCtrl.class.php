@@ -6,7 +6,8 @@
 //use app\security\LoginForm;
 require_once $conf->ROOT_PATH . "/app/security/LoginForm.class.php";
 
-class LoginCtrl{
+class LoginCtrl{    
+    
 	private $form;
 	
 	public function __construct(){

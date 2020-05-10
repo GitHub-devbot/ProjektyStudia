@@ -1,5 +1,6 @@
 <?php
 global $conf;
+global $ctrl2;
 ?>
 <!DOCTYPE html>
 
