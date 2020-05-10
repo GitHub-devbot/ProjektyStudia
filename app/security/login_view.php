@@ -1,4 +1,5 @@
 <!DOCTYPE HTML>
+<link rel="shortcut icon" href= "http://localhost:80/progressus/assets/images/kalkulatorus.png">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
 <head>
 	<meta charset="utf-8" />
@@ -10,7 +11,7 @@
 
 <div style="width:90%; margin: 2em auto;">
 
-<form action="<?php print($conf->APP_ROOT); ?>/app/security/login.php" method="post" class="pure-form pure-form-stacked">
+<form action="<?php print($conf->APP_ROOT); ?>/app/security/security.php?security=login" method="post" class="pure-form pure-form-stacked">
 	<legend>Logowanie</legend>
 	<fieldset>
 		<label for="id_login">login: </label>

@@ -2,9 +2,9 @@
 global $conf;
 include $conf->ROOT_PATH . '/parts/top.php';
 include $conf->ROOT_PATH . '/parts/main.php';
-?>
+?>  
 <div style="width:90%; margin: 2em auto;">
-    <form action=" <?php print($conf->APP_URL); ?> /index.php?action=Oblicz" method="post" class="pure-form pure-form-stacked">
+    <form action="<?php print($conf->APP_URL); ?>/index.php?action=Oblicz" method="post" class="pure-form pure-form-stacked">
         <fieldset>
             <font size = 5> 
             <label for="id_x">Kalkulator lokat bankowych </label> 	
@@ -51,11 +51,18 @@ if (isset($this->result->result)) {
         echo "Kapitał po " . $this->form->z;
         echo " miesiącach: " . $this->result->result;
         echo " zł";
-    ?>  
+    ?>   
     </div>
     <embed src="http://localhost:80/progressus/assets/nice.mp3" loop="false" autostart="true" width="0" height="0" >
 <?php   
 }
+
+
+
+
+
+
+
 
 include $conf->ROOT_PATH . '/parts/bottom.php';
 ?>

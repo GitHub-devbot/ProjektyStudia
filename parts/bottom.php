@@ -57,7 +57,7 @@
 						<div class="widget-body">
 							<p class="simplenav">
 								<a href="#">Strona Domowa</a> | 
-								<b><a href="<?php print($conf->APP_URL . '/app/security/LoginCtrl.class'); ?>">Wyloguj</a></b>
+								<b><a href="http://localhost:80/progressus/app/security/security.php?security=logout">Wyloguj</a></b>
 							</p>
 						</div>
 					</div>
