@@ -2,8 +2,9 @@
 
 require_once 'init.php';
 include $conf->ROOT_PATH . '/app/security/security.php';
+getRouter()->setAction($action);
 
-switch ($action) {
+switch (getRouter()->getAction()) {
     default: {
             require $conf->ROOT_PATH . '/app/CalcCtrl.class.php';
             $ctrl = new CalcCtrl();
@@ -29,4 +30,3 @@ switch ($action) {
             break;
         }
 }
-	
