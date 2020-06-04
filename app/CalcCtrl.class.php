@@ -1,15 +1,17 @@
 <?php
-
 require_once $conf->ROOT_PATH . "/app/CalcResult.class.php";
 require_once $conf->ROOT_PATH . "/core/Messages.class.php";
 require_once $conf->ROOT_PATH . "/app/CalcForm.class.php";
 require_once $conf->ROOT_PATH . "/lib/smarty/Smarty.class.php";
+require $conf->ROOT_PATH . '/Medoo/Medoo.php';
+use Medoo\Medoo;
 
 class CalcCtrl {
 
     public $messages;
     public $form;
     public $result;
+    private $bufor;
 
     public function __construct() {
         $this->messages = new Messages();
@@ -56,15 +58,42 @@ class CalcCtrl {
         $this->form->x = floatval($this->form->x);
         $this->form->y = floatval($this->form->y);
         $this->form->z = intval($this->form->z);
-
+        $this->bufor = floatval($this->form->x);
         for ($licz = 0; $licz < $this->form->z; $licz++) {
             $this->form->x = $this->form->x * (($this->form->y / 100) / 12 + 1);
         }
 
         $this->result->result = $this->form->x;
         
+
+              
     }
 
+    function zapisz(){    
+       
+        $database = new Medoo([
+	'database_type' => 'mysql',
+	'database_name' => 'calc',
+	'server' => 'localhost',
+	'username' => 'root',
+	'password' => '',
+        'charset' => 'utf8mb4',
+	'collation' => 'utf8mb4_polish_ci',
+	'port' => 3306
+]);
+        
+        
+        $database->insert("wynik", [
+	"kwota" => $this->bufor,
+	"oprocentowanie" => floatval($this->form->y),
+        "ilosc_miesiecy" => intval($this->form->z),    
+        "wynik" => floatval($this->form->x),
+        "data"  => date("Y-m-d H:i:s")
+]);   
+        
+    }
+    
+    
     function wyswietl() {
         include 'calcview.php';
     }
@@ -77,6 +106,7 @@ class CalcCtrl {
         $this->pobierz();
         if ($this->waliduj()) {
             $this->wykonaj();
+            $this->zapisz();
         }
         $this->wyswietl();
     }
