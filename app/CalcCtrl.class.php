@@ -3,7 +3,7 @@ require_once $conf->ROOT_PATH . "/app/CalcResult.class.php";
 require_once $conf->ROOT_PATH . "/core/Messages.class.php";
 require_once $conf->ROOT_PATH . "/app/CalcForm.class.php";
 require_once $conf->ROOT_PATH . "/lib/smarty/Smarty.class.php";
-require $conf->ROOT_PATH . '/Medoo/Medoo.php';
+require_once $conf->ROOT_PATH . '/Medoo/Medoo.php';
 use Medoo\Medoo;
 
 class CalcCtrl {
@@ -64,13 +64,11 @@ class CalcCtrl {
         }
 
         $this->result->result = $this->form->x;
-        
-
               
     }
 
-    function zapisz(){    
-       
+    function zapisz(){  
+       if (isset($database) == false){
         $database = new Medoo([
 	'database_type' => 'mysql',
 	'database_name' => 'calc',
@@ -81,7 +79,7 @@ class CalcCtrl {
 	'collation' => 'utf8mb4_polish_ci',
 	'port' => 3306
 ]);
-        
+       }
         
         $database->insert("wynik", [
 	"kwota" => $this->bufor,

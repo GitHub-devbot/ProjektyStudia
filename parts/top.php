@@ -42,6 +42,7 @@ global $conf;
 						<ul class="dropdown-menu">
 							<li><a href="http://localhost:80/progressus/index.php?action=left">Memy z Januszem</a></li>
 							<li><a href="http://localhost:80/progressus/index.php?action=right">Memy z Januszem 2</a></li>
+                                                        <li><a href="http://localhost:80/progressus/app/security/security.php?security=showusers">Pokaż użytkowników</a></li>
 						</ul>
 					</li>
                                         <li><a class="btn" href="http://localhost:80/progressus/app/security/security.php?security=logout"> Wyloguj</a></li>
